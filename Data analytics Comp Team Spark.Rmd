@@ -1,0 +1,92 @@
+---
+title: "Data Analytics Competition"
+author: "Team Spark"
+date:   "11/09/2019"
+output:
+  html_document:
+    code_folding: hide
+    df_print: paged
+    highlight: tango
+    number_sections: yes
+    theme: spacelab
+  pdf_document:
+    toc: yes
+---
+
+# Airbnb market in Boston
+
+```{r loadrelevantpackages,echo  =TRUE, message=FALSE, warning=FALSE}
+library("tidyverse")
+library("ggplot2")
+library("data.table")
+library("stringr")
+library("readxl")
+library("leaflet")
+library("htmltools")
+library("stargazer")
+library("caTools")
+
+
+df_det <- read_csv("listings_details.csv")
+
+#  slice location
+ df_loc <- df_det %>% 
+   select(neighbourhood, latitude, longitude) %>% 
+   group_by(neighbourhood) %>% 
+   slice(1) %>% 
+   ungroup()
+ 
+df_tot <- df_det %>% 
+  group_by(neighbourhood) %>% 
+  summarise(Count = n(),
+            Share = round((Count/55501)*100,1))
+
+ df_sum_loc <- df_tot %>% 
+   left_join(df_loc, by ="neighbourhood")
+
+
+ # Customize Marker Colors
+ get_color <- function(df_sum_loc) {
+   sapply(df_sum_loc$Count, function(Count) {
+     if(Count <= 1000) {
+       "red"
+     } else if(Count <= 3000) {
+       "orange"
+     } else if(Count <= 5000) {
+       "blue"
+     } else {
+       "green"
+     } })
+ }
+ 
+ 
+ # Customize icon colors
+ icons <- awesomeIcons(
+   icon = 'ios-close',
+   iconColor = 'black',
+   library = 'ion',
+   markerColor = get_color(df_sum_loc)
+ )
+ 
+ # Create bin formats
+ bins <- c(0, 1000,3000,5000, 7000)
+ pal <- colorBin(c("red", "orange", "blue", "green"), domain = df_sum_loc$Count, bins = bins)
+ 
+ # Title
+ title <- "Airbnb market in Boston"
+ # Plot Leaftet Map 
+ leaflet(data = df_sum_loc)%>% 
+   setView(lat = 42.35210, lng =  -71.06168, zoom = 12, options = 
+        leafletOptions(minZoom = 14, dragging = FALSE)) %>% 
+   addTiles() %>% 
+   addAwesomeMarkers(lat   = ~latitude, lng = ~longitude, 
+                     popup = ~paste(as.character(Share), "%", sep =""), 
+                     label = ~neighbourhood, 
+                     icon  = icons) %>% 
+   addLegend(
+     pal = pal,
+     values = ~Count,
+     opacity = 1,
+     title = "Number of Listings",
+     position = "bottomright")
+```
