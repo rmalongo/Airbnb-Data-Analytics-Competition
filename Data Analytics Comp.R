@@ -426,4 +426,3 @@ ggplot(df_reg_test_lm, aes(x=predicted, y=std_residuals)) + geom_point(size=2, p
   ) +
   scale_y_continuous(expand = c(0, 0))
 
-
