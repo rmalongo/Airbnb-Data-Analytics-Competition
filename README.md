@@ -3,7 +3,7 @@
 * 15 Teams acrosss Brandeis University participated in Annaul Competition
 # Scope
 * Dataset: Airbnb in Boston, MA (January 2019 - September 2019).
-* Source: The original data was scraped from Airbnb website and made available.
+* Source: The original data was scraped from Airbnb website and made available on Kaggle
 * Description: There are 5 files in total. For each one of them, it will contain the information fromJanuary 2019 to September 2019. The dataset are:
   * Detailed Listings data for Boston
   * Detailed Calendar Data for listings in Boston
