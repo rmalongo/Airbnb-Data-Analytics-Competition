@@ -1,6 +1,8 @@
 # Airbnb-Data-Analytics-Competition
 * Predict daily housing price using machine learning methods for the city of Boston, USA - September 2019
 * 15 Teams acrosss Brandeis University participated in Annual Competition
+See *Team Spark - Final presentation.pptx" for final report*
+
 # Scope
 * Dataset: Airbnb in Boston, MA (January 2019 - September 2019).
 * Source: The original data was scraped from Airbnb website and made available on Kaggle
