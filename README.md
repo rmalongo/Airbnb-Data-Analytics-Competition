@@ -18,7 +18,7 @@
 * Sampling - 3 million rows (accuracy vs computing power)
 # Impact
 * Camein 2nd position where Random Forest Regressor was best model with 0.83 in accuracy
-* Listing description ~ neighborhood - Boston Airbnb less about conviniences and friendly host experience but more about proximity to amenities in Downtown Boston
+* Listing description ~ neighborhood - Boston Airbnb market less about conviniences and friendly host experience but more about proximity to amenities in Downtown Boston
 * Host must Capitalize on time effects
 * Host Update personal information
 
