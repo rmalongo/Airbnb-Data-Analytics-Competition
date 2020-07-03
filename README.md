@@ -4,13 +4,12 @@
 # Scope
 * Dataset: Airbnb in Boston, MA (January 2019 - September 2019).
 * Source: The original data was scraped from Airbnb website and made available.
-* Description: There are 5 files in total. For each one of them, it will contain the information from
-January 2019 to September 2019. The dataset are:
-* Detailed Listings data for Boston
-* Detailed Calendar Data for listings in Boston
-* Detailed Review Data for listings in Boston
-* Summary information and metrics for listings in Boston 
-* Summary Review data and Listing ID (to facilitate time-based analytics and visualizations linked to a listing)
+* Description: There are 5 files in total. For each one of them, it will contain the information fromJanuary 2019 to September 2019. The dataset are:
+ * Detailed Listings data for Boston
+ * Detailed Calendar Data for listings in Boston
+ * Detailed Review Data for listings in Boston
+ * Summary information and metrics for listings in Boston 
+ * Summary Review data and Listing ID (to facilitate time-based analytics and visualizations linked to a listing)
 # Vision
 * Feature engineering
   * Neighborhood - Label neighborhood by income levels based on US census Bureau data
