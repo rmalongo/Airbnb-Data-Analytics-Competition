@@ -1,6 +1,6 @@
 # Airbnb-Data-Analytics-Competition
 * Predict daily housing price using machine learning methods for the city of Boston, USA - September 2019
-* 15 Teams acrosss Brandeis University participated in Annaul Competition
+* 15 Teams acrosss Brandeis University participated in Annual Competition
 # Scope
 * Dataset: Airbnb in Boston, MA (January 2019 - September 2019).
 * Source: The original data was scraped from Airbnb website and made available on Kaggle
@@ -19,7 +19,7 @@
 # Impact
 * Camein 2nd position where Random Forest Regressor was best model with 0.83 in accuracy
 * Listing description ~ neighborhood - Boston Airbnb market less about conviniences and friendly host experience but more about proximity to amenities in Downtown Boston
-* Host must Capitalize on time effects
-* Host Update personal information
+* Host must capitalize on time effects
+* Host must update personal information
 
 
