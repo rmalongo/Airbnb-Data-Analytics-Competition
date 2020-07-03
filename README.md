@@ -19,7 +19,7 @@
 # Impact
 * Camein 2nd position where Random Forest Regressor was best model with 0.83 in accuracy
 * Listing description ~ neighborhood - Boston Airbnb market less about conviniences and friendly host experience but more about proximity to amenities in Downtown Boston
-* Host must capitalize on time effects
+* Host must capitalize on time effects: Charge for a premium over the summer and fall to capitalize on high demand
 * Host must update personal information
 
 
